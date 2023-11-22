@@ -144,3 +144,12 @@ font-size: large;
 .typed-text{
   font-size: 1.7rem !important;
 }
+
+.my-icons{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-decoration: none;
+ 
+}
+

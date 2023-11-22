@@ -1,8 +1,10 @@
 import React from "react";
-import logo from "../ansu-logo1.png";
+import logo from "../logo1.png";
+
 /*****Font Awesome******/
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -20,45 +22,32 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <FontAwesomeIcon icon={faBars} style={{color: "#fff"}}/>
+          <FontAwesomeIcon icon={faBars} style={{ color: "#fff" }} />
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
+            <Link className="nav-link" to="/Home">
+              <li className="nav-item active">
                 Home <span className="sr-only"></span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                About Me
-              </a>
-            </li>
+              </li>
+            </Link>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Services
-              </a>
-            </li>
+            <Link className="nav-link" to="/AboutMe">
+              <li className="nav-item">About Me</li>
+            </Link>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Work
-              </a>
-            </li>
+            <Link className="nav-link" to="/Skills">
+              <li className="nav-item">Skills</li>
+            </Link>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Portfolio
-              </a>
-            </li>
+            <Link className="nav-link" to="/Project">
+              <li className="nav-item">Projects</li>
+            </Link>
 
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Contacts
-              </a>
-            </li>
+            <Link className="nav-link" to="/Contacts">
+              <li className="nav-item">Contacts</li>
+            </Link>
           </ul>
         </div>
       </div>

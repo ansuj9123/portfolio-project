@@ -1,18 +1,28 @@
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar";
 
-import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Contacts from "./components/Contacts";
+import Project from "./components/Project";
 
 function App() {
   return (
     <>
-    
-
-      <Navbar />
-      <Header />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/Home" element={<Home />}></Route>
+          <Route exact path="/AboutMe" element={<About />}></Route>
+          <Route exact path="/skills" element={<Skills />}></Route>
+          <Route exact path="/Project" element={<Project />}></Route>
+          <Route exact path="/Contacts" element={<Contacts />}></Route>
+        </Routes>
+      </Router>
     </>
   );
 }
