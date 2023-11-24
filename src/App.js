@@ -8,6 +8,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Contacts from "./components/Contacts";
 import Project from "./components/Project";
+import Message from "./components/Message";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/skills" element={<Skills />}></Route>
           <Route exact path="/Project" element={<Project />}></Route>
           <Route exact path="/Contacts" element={<Contacts />}></Route>
+          <Route exact path="/Message" element={<Message />}></Route>
         </Routes>
       </Router>
     </>

@@ -1,32 +1,31 @@
 import React from "react";
-import { useState } from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser"; // Corrected import statement for EmailJS
+import { Link } from "react-router-dom";
 
 function Contacts() {
+  const form = useRef();
 
-  const [formData, setFormData] = useState({
-    name:'',
-    Email:'',
-    Subject: '',
-    Message: ''
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  });
+    emailjs
+      .sendForm(
+        "service_e4fhbzl",
+        "template_o53avri",
+        form.current,
+        "9DJwyl-5kh4lhv2ri"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
- const handleChange = (e)=>{
-  setFormData({...formData, [e.target.name]: e.target.value})
- };
-
- const handleSubmit = (e)=>{
-  e.preventDefault();
-  alert('Your message has been submitted.')
- 
-
- setFormData({
-  name:'',
-  Email:'',
-  Subject: '',
-  Message:''
- });
-};
   return (
     <section className="mb-2 m-3">
       <h2 className="h1-responsive font-weight-bold text-center my-4">
@@ -34,12 +33,14 @@ function Contacts() {
       </h2>
 
       <p className="text-center w-responsive mx-auto mb-5">
-        Please do not hesitate to contact me if you have any question.
+        Please do not hesitate to contact me if you have any questions.
       </p>
 
       <div className="row">
         <div className="col-md-9 mb-md-0 mb-5">
-          <form onSubmit={handleSubmit}
+          <form
+            ref={form}
+            onSubmit={sendEmail}
             id="contact-form"
             name="contact-form"
             action="mail.php"
@@ -54,7 +55,7 @@ function Contacts() {
                     name="name"
                     className="form-control"
                   />
-                  <label for="name" className="" required>
+                  <label htmlFor="name" className="" required>
                     Your name
                   </label>
                 </div>
@@ -68,7 +69,7 @@ function Contacts() {
                     name="email"
                     className="form-control"
                   />
-                  <label for="email" className="" required>
+                  <label htmlFor="email" className="" required>
                     Email
                   </label>
                 </div>
@@ -84,7 +85,7 @@ function Contacts() {
                     name="subject"
                     className="form-control"
                   />
-                  <label for="subject" className="" required>
+                  <label htmlFor="subject" className="" required>
                     Subject
                   </label>
                 </div>
@@ -101,21 +102,19 @@ function Contacts() {
                     rows="2"
                     className="form-control md-textarea"
                   ></textarea>
-                  <label for="message">Your message</label>
+                  <label htmlFor="message">Your message</label>
                 </div>
               </div>
             </div>
+            <Link to="/Message">
+              <div className="text-center text-md-left">
+                <button type="submit" className="btn btn-primary">
+                  Send
+                </button>
+              </div>
+            </Link>
+            <div className="status"></div>
           </form>
-
-          <div className="text-center text-md-left">
-            <a
-              className="btn btn-primary"
-              onclick="document.getElementById('contact-form').submit();"
-            >
-              Send
-            </a>
-          </div>
-          <div className="status"></div>
         </div>
 
         <div className="col-md-3 text-center">
