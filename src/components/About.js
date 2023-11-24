@@ -5,11 +5,7 @@ import {
   FaLinkedin,
   FaTwitter,
   FaGithub,
-  FaDatabase,
-  FaReact,
-  FaJs,
-  FaNode,
-  FaCss3,
+ 
 } from "react-icons/fa";
 import javas from "../Javascript.png";
 import react from "../react.png";
@@ -28,7 +24,7 @@ const About = () => {
             alt="myPicture"
           />
           <div className="">
-            <h1 className=""></h1>
+           
             <span className="job-title">
               <a className="my-icons p-3" href="/Home">
                 Front End Developer

@@ -10,9 +10,9 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-secondary">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <button className="navbar-brand" href="">
           <img className="logo" src={logo} alt="logo..." />
-        </a>
+        </button>
         <button
           className="navbar-toggler"
           type="button"
