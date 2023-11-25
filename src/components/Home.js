@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Typed from "react-typed";
+// import Typed from "react-typed";
 
 
 
@@ -10,7 +10,7 @@ const Home = () => {
       <div className="main-info">
       
         <h1>Web development and websites </h1>
-        <Typed
+        {/* <Typed
           className="typed-text"
           strings={[
             "Web Design",
@@ -21,7 +21,7 @@ const Home = () => {
           typeSpeed={40}
           backSpeed={60}
           loop
-        />
+        /> */}
         <Link to="/Contacts" className="btn btn-success my-5">CONTACT ME</Link>
       </div>
     </div>
