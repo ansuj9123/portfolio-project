@@ -1,9 +1,11 @@
 import React from 'react';
+import { FaDownload, FaGithub} from "react-icons/fa";
 
 import java from "../Javascript.png";
 import react from "../react.png";
 import post from "../postgres.png";
 import Node from "../node.png";
+
 
 const Project = () => {
 
@@ -38,12 +40,19 @@ const Project = () => {
               </div>
               <p>
                 Check out my projects on GitHub:{" "}
-                <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                  {githubLink}
+                <a href={githubLink}  target="_blank" rel="noopener noreferrer">
+                   {githubLink} 
+                  
+                  <FaGithub />
                 </a>
               </p>
               <p>
-                <a href={resumeUrl}>Download my resume</a>
+                <a className="p-3" href={resumeUrl}>
+                  Download my resume
+                </a>
+                <a href={resumeUrl}>
+                  <FaDownload />
+                </a>
               </p>
             </div>
           </div>
