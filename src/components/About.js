@@ -15,6 +15,7 @@ import post from "../postgres.png";
 
 const About = () => {
   
+   
   return (
     <section className="container row">
       <div className="col-sm bg-light">
