@@ -1,6 +1,7 @@
 import React from "react";
 import profile from "../profile.jpeg";
 
+
 import {
   FaLinkedin,
   FaTwitter,
@@ -24,7 +25,6 @@ const About = () => {
             alt="myPicture"
           />
           <div className="">
-           
             <span className="job-title">
               <a className="my-icons p-3" href="/Home">
                 Front End Developer
@@ -122,16 +122,16 @@ const About = () => {
                 your web development dreams into reality.
               </p>
               <p>
-                Feel free to <a href="/Contacts">get in touch</a> to discuss how
-                I can contribute to your next project. I'm excited to embark on
-                this creative journey with you.
+                Feel free to <a href="/Contacts">get in touch</a> to discuss how I can contribute
+                to your next project. I'm excited to embark on this creative
+                journey with you.
               </p>
             </div>
           </div>
         </div>
-          <div>
-            <h3 className="m-3">Here is my Expertise</h3>
-          </div>
+        <div>
+          <h3 className="m-3">Here is my Expertise</h3>
+        </div>
         <div className="container d-flex gap-3 shadow p-3 mb-5 bg-body-tertiary">
           <div
             className="card border-0 shadow p-3 bg-body-tertiary rounded"
